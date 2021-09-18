@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as func;
+
+body {
+    font-family: vars.$text-font;
+    font-weight: func.weight(normal);
+}
+
+h1 {
+   font-weight: func.weight(bolder); 
+   text-transform: uppercase;
+   color: vars.$black;
+}
+
+h2 {
+    color: func.sec-color(bright-blue);
+    font-weight: func.weight(bolder); 
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-weight: func.weight(bold);
+    color: vars.$white;
+}
+
+a {
+    color: func.sec-color(bright-blue);
+}
+
+p {
+    line-height: 1.5;
+}

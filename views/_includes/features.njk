@@ -1,0 +1,16 @@
+---
+layout: base
+tags: features
+---
+
+<section class="feature" role="features">
+    <div class="feature__hero">
+        <img class="feature__hero__image" src="/assets/img/features/{{ img }}" alt="{{ title }}">
+    </div>
+
+    <article class="feature__wysiwyg" role="content">
+        {{ content | safe }}
+
+        <a href="#" class="primary-button">Donwload the app!</a>
+    </article>
+</section>

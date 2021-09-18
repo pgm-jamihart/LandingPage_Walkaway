@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as vars;
+
+@function weight($weight-value) {
+    @return map-get(vars.$font-weights, $weight-value);
+}
+
+@function sec-color($color-name) {
+    @return map-get(vars.$secondary-colors, $color-name);
+}
+

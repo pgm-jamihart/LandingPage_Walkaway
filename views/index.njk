@@ -1,0 +1,70 @@
+---
+layout: base
+title: Home
+eleventyNavigation: 
+    key: Home
+---
+
+{% include "_components/header.njk" %} 
+
+<section class="features horizontal__layout fade-in-up" role="section features">
+    <h2>Features</h2>
+    <div class="features__container">  
+       {% for feature in collections.features %}
+            <div class="features__container__feature"> 
+                <h3> {{ feature.data.title }} </h3>
+                <lottie-player class="features__container__feature__lottie" src="{{ feature.data.animation }}"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                <p> {{ feature.data.text }} </p>
+                <a class="features__container__feature__link secondary-button" href="{{ feature.url }}">Discover {{ feature.data.title }}! </a>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="sponsors horizontal__layout fade-in-up" role="section sponsors">
+    <h2>Sponsors</h2>
+    <ul class="sponsors__container" role="sponsors">  
+        {% for sponsor in sponsors %}
+            <li class="sponsors__container__img"> 
+                <a href="{{ sponsor.url }}" target="blank">
+                    <img src="{{ sponsor.image }}"/>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="message horizontal__layout fade-in-up" role="section sponsor messages">
+    <h2>Sponsor Message</h2>
+    <ul class="message__container">  
+        {% for quote in quotes %}
+            <li class="message__container__quote"> 
+                <blockquote>"{{ quote.quote }}"</blockquote>
+                <span><strong>{{ quote.author }}</strong></span>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+{% if collections.blogs | trending | length %}
+    <section class="blogs horizontal__layout fade-in-up" role="section trending blogs">
+        <h2>Trending this week</h2>
+        <div class="blogs__container">  
+            {% for blog in collections.blogs | trending %}
+                <a class="blogs__container__link" href="{{ blog.url }}">
+                    <img src="/assets/img/{{ blog.data.img }}" alt="">
+                    <div class="blogs__container__link__content">
+                        <div>
+                            <h3 class="blogs__container__link__content__title">{{ blog.data.title }}</h3>
+                            <p>{{ blog.data.teaser_text }}</p>
+                        </div>
+                        <p class="blogs__container__link__content__call-to-action">Read full article</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}
+
+
+

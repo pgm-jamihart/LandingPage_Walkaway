@@ -1,0 +1,22 @@
+[
+    {
+        "url": "https://www.facebook.com/",
+        "icon": "/assets/img/socials/facebook.png",
+        "name": "Facebook"
+    },
+    {
+        "url": "https://www.instagram.com/",
+        "icon": "/assets/img/socials/instagram.png",
+        "name": "Instagram"
+    },
+    {
+        "url": "https://twitter.com/home?lang=nl",
+        "icon": "/assets/img/socials/twitter.png",
+        "name": "Twitter"
+    },
+    {
+        "url": "https://www.youtube.com/",
+        "icon": "/assets/img/socials/youtube.png",
+        "name": "Youtube"
+    }
+]

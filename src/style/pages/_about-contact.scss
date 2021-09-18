@@ -1,0 +1,71 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as func;
+@use '../abstracts/extends';
+
+.about-contact__container{
+    @extend %flex-center;
+
+    &__image {
+        width: 50%;
+    }
+
+    &__content {
+        padding: 0 4rem;
+        width: 100%;
+    }
+}
+
+.contact {
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    input, 
+    textarea {
+        box-shadow: vars.$box-shadow-light-inset;
+        border-radius: vars.$border-radius-SM;
+        border: none;
+        width: calc(100% - 1rem);
+        margin-bottom: 1rem;
+        padding: 0.75rem 0.5rem;
+
+        &::placeholder {
+            font-weight: func.weight(light);
+        }
+    }
+
+    &__subject {
+        margin-bottom: 1rem;
+
+        select {
+            width: 100%;
+            padding: 0.5rem 0.5rem;
+            border-radius: vars.$border-radius-SM;
+            box-shadow: vars.$box-shadow-light;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    &__btn {
+        margin-top: 0.5rem;
+
+        button {
+            width: 100%;
+            border: 3px solid func.sec-color(bright-blue);
+            color: func.sec-color(bright-blue);
+            background-color: vars.$white;
+
+            &:hover {
+                background-color: func.sec-color(bright-blue);
+                color: vars.$white;
+            }
+        }
+    } 
+}
+
+    
+
+

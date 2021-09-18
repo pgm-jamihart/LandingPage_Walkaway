@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@use 'abstracts/variables';
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/activeState';
+@use 'abstracts/extends';
+@use 'abstracts/invisbleLink';
+
+// 2. Vendors
+@use 'vendors/normalize';
+@use 'vendors/fonts';
+
+// 3. Base stuff
+@use 'base/base';
+@use 'base/typography';
+@use 'base/helpers';
+@use 'base/animations';
+
+// 4. Layout-related sections
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/navigation';
+
+// 5. Components
+@use 'components/button';
+
+// 6. Page-specific styles
+@use 'pages/home';
+@use 'pages/features_wysiwyg';
+@use 'pages/blogs_wysiwyg';
+@use 'pages/about-contact';
+
+// 7. Themes
+@use 'themes/default';
+
+

@@ -1,0 +1,15 @@
+---
+layout: base
+tags: blogs
+---
+
+
+    <section class="blogs" role="blogs">
+        <div class="blogs__hero">
+            <img class="blogs__hero__image" src="/assets/img/{{ img }}" alt="{{ title }}">
+        </div>
+
+        <article class="blogs__wysiwyg" lang="{{ lang }}">
+            {{ content | safe }}
+        </article>
+    </section>

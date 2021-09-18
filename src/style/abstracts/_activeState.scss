@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as vars;
+
+#active {
+    display: block;
+    color: vars.$primary-color;
+    background: vars.$white;
+    border-radius: vars.$border-radius-SM;
+    padding: 0.5rem;
+    box-shadow: vars.$box-shadow-light-inset;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/main.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#ffca2c">
+    <meta name="msapplication-TileColor" content="#ffca2c">
+    <meta name="theme-color" content="#ffca2c">
+</head>
+
+<body>
+    <a id="invisible-link" href="#maincontent">Skip to main content</a>
+
+    {% include "_components/navigation.njk" %} 
+   
+    <main role="main" id="maincontent" tabindex="-1">
+        {{ content | safe }}
+    </main>
+
+    {% include "_components/footer.njk" %} 
+
+    <script src="/assets/animations.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+</html>

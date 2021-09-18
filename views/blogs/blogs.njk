@@ -1,0 +1,26 @@
+---
+layout: base
+title: Blogs
+eleventyNavigation:
+  key: Blogs
+  order: 3
+---
+
+<section class="blogs horizontal__layout fade-in-up" role="blogs">
+    <h1>Blogs</h1>
+    <div class="blogs__container">  
+        {% for blog in collections.blogs %}
+            <a class="blogs__container__link" href="{{ blog.url }}">
+                <img src="/assets/img/{{ blog.data.img }}" alt="">
+                <div class="blogs__container__link__content">
+                    <div>
+                        <h3 class="blogs__container__link__content__title">{{ blog.data.title }}</h3>
+                        <p>{{ blog.data.teaser_text }}</p>
+                    </div>
+                    <p class="blogs__container__link__content__call-to-action">Read full article</p>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</section>
+

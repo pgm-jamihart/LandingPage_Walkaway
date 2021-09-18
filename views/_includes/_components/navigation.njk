@@ -1,0 +1,31 @@
+<nav class="navbar" aria-label="Main Navigation" role="naviagtion">
+    <a href="/" class="navbar__logo">
+        <img class="navbar__logo__img" src="/assets/img/logo-nav.png" alt="">
+        <h1 class="navbar__logo__text">Walkaway.com</h1>
+    </a>
+
+    {% set navPages = collections.all | eleventyNavigation %}
+    {% macro renderNavListItem(entry) -%}
+        <li class="navbar__list-item">
+            <a href="{{ entry.url | url }}" {% if page.url === entry.url %} id="active" {% endif %} class="navbar__list-item__link">   
+                {{ entry.title}}
+            </a>
+
+            {%- if entry.children.length -%}
+                <ul class="navbar__features__list">
+                    {%- for child in entry.children %}
+                        <li class="navbar__features__list-item">
+                            <a href="{{ child.url }}">
+                                {{ child.title}}
+                            </a>
+                        </li>
+                    {% endfor -%}
+                </ul>
+            {%- endif -%}
+        </li>
+    {%- endmacro %}
+
+    <ul class="navbar__list" role="navigation">
+        {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+    </ul>
+</nav>

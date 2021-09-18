@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as func;
+
+.primary-button {
+    font-weight: func.weight(bold);
+    text-align: center;
+    display: block;
+    color: vars.$primary-color;
+    background: func.sec-color(bright-yellow);
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: vars.$border-radius-M;
+    cursor: pointer;
+    transition: vars.$transition;
+    box-shadow: vars.$box-shadow-dark;
+
+    &:hover {
+        color: func.sec-color(bright-yellow);
+        background-color: vars.$primary-color;
+        transform: translateY(0.1rem);
+        box-shadow: vars.$box-shadow-dark-inset;
+    }
+}
+
+.secondary-button {
+    display: block;
+    font-weight: func.weight(bold);
+    text-align: center;
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: vars.$border-radius-M;
+    transition: vars.$transition;
+    box-shadow: vars.$box-shadow-dark;
+    cursor: pointer;
+}

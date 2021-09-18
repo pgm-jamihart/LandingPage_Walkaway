@@ -1,0 +1,51 @@
+---
+layout: about-contact
+title: Contact
+img: contact.png
+eleventyNavigation: 
+    key: Contact Us
+    order: 5
+---
+
+<h1>Contact us</h1>
+
+<form action="" class="contact" role="form">
+    <div class="contact__name">
+        <label for="name">Name</label>
+        <input type="text" placeholder="Jamie-Lee Hart" required>
+    </div>
+
+    <div class="contact__tel">
+        <label for="tel">Telephone</label>
+        <input type="tel" placeholder="04xx xx xx xx" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    </div>
+
+    <div class="contact__email">
+        <label for="email">E-mail</label>
+        <input type="email" placeholder="mijnnaam@voorbeeld.be" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    </div>
+
+    <div class="contact__subject" role="checkbox">
+        <label for="subject">Choose a subject:</label>
+        <select id="contact__subjects" name="subject">
+            <option value="">-- Please choose an option --</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Educational">Educational</option>
+            <option value="Romantic">Romantic</option>X
+            <option value="Serene">Serene</option>X
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <div class="contact__message">
+        <label for="message">Message</label>
+        <textarea name="message" id="" rows="4" required placeholder="Your message..."></textarea>
+    </div>
+
+    <div class="contact__btn">
+        <button class="secondary-button">Send</button>
+    </div>
+    
+</form>
+
+

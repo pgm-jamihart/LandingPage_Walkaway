@@ -1,0 +1,8 @@
+@use '../abstracts/variables' as vars;
+
+h3 {
+    background-color: vars.$primary-color;
+    padding: 0.2rem;
+    border-radius: vars.$border-radius-SM;
+}
+

@@ -1,0 +1,68 @@
+<footer role="footer">
+    <section class="footer">
+        <div class="footer__navigation">
+            <h4>Navigation</h4>
+            {% set navFooter = collections.all | eleventyNavigation %}
+            {% macro renderNavListItem(entry) -%}
+                <li class="footer__navigation__list-item">
+                    <a href="{{ entry.url }}">{{ entry.title }}</a>
+                </li>
+
+                {%- if entry.children.length -%}
+                    <ul>
+                        {%- for child in entry.children %}
+                            <li>
+                                <a class="footer__navigation__feature__link" href="{{ child.url }}">{{ child.title}}</a>
+                            </li>
+                        {% endfor -%}
+                    </ul>
+                {%- endif -%}
+                {%- endmacro -%}
+
+                <ul class="footer__navigation__list" role="navigation">
+                    {%- for entry in navFooter %}{{ renderNavListItem(entry) }}{%- endfor -%}
+                </ul> 
+        </div>
+
+        <div class="footer__img">
+            <img src="/assets/img/footer_img.png" alt="">
+            <a href="#" class="primary-button">Dowload the app</a>
+        </div>
+
+        <div class="footer__container">
+            <div class="footer__container__socials">
+                <h4>Follow us</h4>
+                <ul class="footer__container__socials__list">  
+                    {% for social in socials %}
+                        <li> 
+                            <a href="{{ social.url }}">
+                                <img class="footer__container__socials__list__image" src="{{ social.icon }}" alt="on {{ social.name }}"/>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="footer__container__appstore">
+                <h4>Download</h4>
+                <a class="footer__container__appstore__link" href="https://play.google.com/store">
+                    <img src="/assets/img/badge-google-play.png" alt="apple appstore">
+                </a>
+                <a class="footer__container__appstore__link" href="https://www.apple.com/app-store/">
+                    <img src="/assets/img/badge-apple.svg" alt="google play store">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <div class="copyright">
+        <p>Copyright {{ helpers.currentYear() }} @ Jamie-Lee Hart</p>
+        <div class="copyright__icons">
+            <p>Icons made by </p>
+            <a href="https://www.freepik.com" title="Freepik">Freepik</a> 
+            <p>Icons made by </p>
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+    </div> 
+
+</footer>

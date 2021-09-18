@@ -1,0 +1,27 @@
+@use '../abstracts/variables' as vars;
+
+.blogs {
+    &__hero {
+        margin: 3rem auto;
+        width: 70rem;
+    
+        &__image {
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+    }
+    
+    &__wysiwyg {
+        width: 50rem;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+        color: vars.$primary-color;
+        line-height: 1.5;
+    
+        img {
+            width: 50rem;
+            margin-top: 2rem;
+            border-radius: vars.$border-radius-M;
+        }
+    }
+}

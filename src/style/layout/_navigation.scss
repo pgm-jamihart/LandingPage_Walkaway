@@ -1,0 +1,92 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as func;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/extends';
+
+.navbar {
+    background-color: vars.$primary-color;
+    box-shadow: vars.$box-shadow-dark;
+    @extend %flex-center;
+
+    &__logo {
+        margin-left: 2rem;
+        text-decoration: none;
+        @extend %flex-center;
+
+        &__img {
+            width: 3rem;
+            margin-right: 1rem;
+        }
+
+        &__text {
+            text-transform: none;
+            color: vars.$white;
+        }
+    }
+    
+    &__list {
+        @include mix.reset-list();
+        @extend %flex-center;
+        margin-right: 2rem;
+
+        &-item {
+            margin: 0 1rem;
+            position: relative;
+            padding: 1rem 1rem;
+
+            &:hover {
+                background-color: lighten(vars.$primary-color, $amount: 7);
+                border-radius: vars.$border-radius-SM;
+            }
+
+            &:nth-child(2):hover .navbar__features__list {
+                display: block;
+            }
+
+            &__link {
+                color: vars.$white;
+                text-decoration: none;   
+            }
+        }
+        
+    }
+
+    &__features__list {
+        @include mix.reset-list();
+        z-index: 1;
+        padding: 0;
+        background-color: lighten(vars.$primary-color, $amount: 10); 
+        border-radius: vars.$border-radius-M;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 3rem;
+        display: none;
+        box-shadow: vars.$box-shadow-dark;
+
+        &:hover {
+            display: block;
+        }
+
+        &-item {
+            padding: 1rem 2rem;
+            border-bottom: 1px solid vars.$primary-color;
+            transition: vars.$transition;
+            cursor: pointer;
+
+            &:hover {
+                color: vars.$white;
+                background-color: lighten(vars.$primary-color, $amount: 30);
+                border-radius: vars.$border-radius-M;
+            }
+
+            &:last-child {
+                border: none;
+            }
+            
+            a {
+                color: vars.$white;
+            }
+        }   
+    }
+}

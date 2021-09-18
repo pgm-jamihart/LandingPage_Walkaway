@@ -1,0 +1,90 @@
+/*
+ * Colors 
+*/
+
+$primary-color: #525b6b;
+
+$secondary-colors: (
+    light-green: #EEF0B1,
+    dark-green: #b6b95d9a,
+    bright-yellow: #ffd24c,
+    dark-yellow: #d6a71b,
+    bright-blue: #0000ff,
+);
+
+$shadesloop: (
+    shade1: #d4d6b4,
+    shade2: #C4C69E,
+    shade3: #b6b95d9a,
+    shade4: #B6B95D,
+    shade5: #a0a340,
+    shade6: #858744,
+    shade7: #3A3B1D,
+);
+
+$white: #ffffff;
+$black: #000000;
+
+/*
+ * Box-shadow 
+*/
+
+$box-shadow-dark: 0px 5px 5px rgba(0, 0, 0, 0.37);
+$box-shadow-dark-inset: inset 0px 0px 8px rgba(0, 0, 0, 0.568);
+$box-shadow-light: rgb(204, 219, 232) 3px 3px 6px 0px, rgba(204, 219, 232, 0.5) 1px 1px 6px 1px; 
+$box-shadow-light-inset: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(204, 219, 232, 0.5) 1px 1px 6px 1px inset;
+
+
+/*
+ * Border-radius
+*/
+
+$border-radius-SM: 0.3rem;
+$border-radius-M: 0.5rem;
+$border-radius-L: 2rem;
+$border-radius-Circle: 50%;
+
+/*
+ * Transition
+*/
+
+$transition: all 0.2s ease;
+
+/*
+ * Font
+*/
+
+$text-font: 'Poppins', sans-serif;
+
+$font-weights: (
+    "light": 300,
+    "normal": 400,
+    "bold": 500,
+    "bolder": 700,
+);
+
+/*
+ * Animation SVG text hero
+*/
+$stroke-letter: (
+    stroke-letter1: 556.4365234375px,
+    stroke-letter2: 340.53167724609375px,
+    stroke-letter3: 206.4199981689453px,
+    stroke-letter4: 355.8349609375px,
+    stroke-letter5: 340.47552490234375px,
+    stroke-letter6: 556.4259643554688px,
+    stroke-letter7: 340.4754638671875px,
+    stroke-letter8: 258.4997863769531px,
+);
+
+$time-stroke: (
+    time1: 0s,
+    time2: 0.3s,
+    time3: 0.6s,
+    time4: 0.9s,
+    time5: 1.2s,
+    time6: 1.5s,
+    time7: 1.8s,
+    time8: 2.1s,
+);
+

@@ -1,0 +1,132 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as func;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/extends';
+
+.footer {
+    @extend %flex-center;
+    margin-top: 2rem;
+    background-color: func.sec-color(dark-green);
+    padding: 1rem 2rem;
+    box-shadow: vars.$box-shadow-dark-inset;
+
+   
+    
+    &__navigation {
+        height: 15rem;
+        background-color: vars.$white;
+        padding: 0 0.5rem 1rem 0.5rem;
+        padding-left: 2rem;
+        box-shadow:  vars.$box-shadow-dark;
+        border-radius: vars.$border-radius-M;
+
+        &__list {
+            @include mix.reset-list();
+            width: 14.5rem;
+    
+            &-item {
+                margin: 0.3rem 0;
+                
+                a {
+                    color: vars.$primary-color;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &__feature__link{
+            text-decoration: none;
+            color: vars.$primary-color;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 13rem;
+        
+        img {
+            padding: 0.5rem;
+            box-shadow: vars.$box-shadow-dark-inset;
+            width: 50%;
+            margin-bottom: 1rem;
+            background-color: func.sec-color(light-green);
+            border-radius: vars.$border-radius-M;
+        }
+
+        a {
+            width: 50%;
+        }
+    }
+
+    &__container {
+        height: 15rem;
+        background: vars.$white;
+        padding: 0 0.5rem 1rem 0.5rem;
+        box-shadow: vars.$box-shadow-dark;
+        border-radius: vars.$border-radius-M;
+
+        &__socials {
+            width: 14.5rem;
+    
+            &__list {
+                @extend %flex-center;
+                @include mix.reset-list();
+
+                &__image {
+                    width: 2.75rem;
+                    border-radius: vars.$border-radius-Circle;
+                    transition: vars.$transition;
+
+                    &:hover {
+                        transform: translateY(-0.3rem);
+                        box-shadow: vars.$box-shadow-dark;
+                    }
+                }
+            }
+        }
+
+        &__appstore {
+            width: 14.5rem;
+    
+            &__link {
+                text-decoration: none;
+                
+                img {
+                    width: 7rem;
+                    transition: vars.$transition;
+
+                    &:hover {
+                        transform: translateY(-0.3rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    @extend %flex-center;
+    margin: 0;
+    padding: 0.5rem 2rem;
+    color: vars.$white;
+    background-color: vars.$primary-color; 
+    font-weight: func.weight(light);
+    font-size: 0.8rem;
+
+    p {
+        margin: 0;
+    }
+
+    &__icons {
+        a {
+            color: vars.$white;
+        }
+
+        p {
+            display: inline;
+        }
+    }
+}

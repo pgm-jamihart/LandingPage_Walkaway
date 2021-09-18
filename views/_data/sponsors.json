@@ -1,0 +1,42 @@
+[
+    {
+        "image": "/assets/img/sponsors/chiro.png",
+        "url": "https://chiro.be/"
+    },
+    {
+        "image": "/assets/img/sponsors/ksa.png",
+        "url": "https://www.ksa.be/"
+    },
+    {
+        "image": "/assets/img/sponsors/formaat.png",
+        "url": "https://www.formaat.be/"
+    },
+    {
+        "image": "/assets/img/sponsors/ugent.png",
+        "url": "https://www.ugent.be/"
+    },
+    {
+        "image": "/assets/img/sponsors/artevelde.jpg",
+        "url": "https://www.arteveldehogeschool.be/"
+    },
+    {
+        "image": "/assets/img/sponsors/stad_gent.png",
+        "url": "https://stad.gent/nl"
+    },
+    {
+        "image": "/assets/img/sponsors/vlaamse-overheid.gif",
+        "url": "https://www.vlaanderen.be/"
+    },
+    {
+        "image": "/assets/img/sponsors/oost-vlaanderen.png",
+        "url": "https://www.oost-vlaanderen.be/"
+    },
+    {
+        "image": "/assets/img/sponsors/west-vlaanderen.jpg",
+        "url": "https://www.west-vlaanderen.be/"
+    },
+    {
+        "image": "/assets/img/sponsors/antwerpen.jpg",
+        "url": "https://www.antwerpen.be/"
+    }
+]

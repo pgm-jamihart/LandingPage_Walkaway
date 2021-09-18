@@ -1,0 +1,147 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as func;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/extends';
+
+.hero {
+    display: flex;
+    align-items: flex-start; 
+    position: relative;
+    background-color: func.sec-color(dark-green);
+    color: vars.$primary-color;
+    box-shadow: vars.$box-shadow-dark-inset;
+ 
+    &__media {
+     margin: 0;
+     margin-left: 2rem;
+     width: 60%;
+     height: 100%;
+ 
+        &__image {
+            margin: 2rem 0;
+            background-color: func.sec-color(light-green);
+            border-radius: vars.$border-radius-L;
+            padding: 1rem 0 0 1rem;
+            box-shadow: vars.$box-shadow-dark-inset;
+        }
+ 
+        &__SVG {
+           width: 60%;
+           margin-top: 4rem;             
+        }
+ 
+        &__call-to-action {
+            @extend %flex-center;
+            width: 37.8125rem;
+            margin-bottom: 2rem;
+ 
+            &--download {
+                width: 70%;
+                margin-right: 0.5rem;
+
+            }
+ 
+            &--learn-more {
+                width: 30%;
+                color: func.sec-color(bright-yellow);
+                background-color: vars.$primary-color;
+
+                &:hover {
+                color: vars.$primary-color;
+                background-color: func.sec-color(bright-yellow);
+                transform: translateY(0.1rem);
+                box-shadow: vars.$box-shadow-dark-inset;
+                }
+            }
+         }
+    }
+ 
+    &__content {
+        padding: 3rem;
+        padding-left: 0;
+        width: 65%;
+ 
+        &__container {
+            @extend %flex-center;
+            padding-left: 2rem;
+ 
+            &__title {
+                margin-top: 1rem;
+                color: vars.$primary-color;
+            }
+ 
+            &__more {
+                @extend %flex-center;
+ 
+                &__chevron {
+                    width: 1rem;
+                    transition: vars.$transition;
+                } 
+    
+                a {
+                    text-decoration: none;
+                    color: vars.$primary-color;
+                    margin-right: 1rem;
+                }
+            }
+ 
+            &__more:hover &__more__chevron {
+                transform: translateX(0.5rem);
+            }    
+        }
+ 
+        &__list {
+            @include mix.reset-list();
+            padding-left: 2rem;
+            margin: 2rem 0;
+            border-left: 1px solid vars.$primary-color;
+            
+            &-item {
+                margin: 1rem 0;
+ 
+                &__text {
+                    background-color: vars.$white;
+                    padding: 0.75rem 1rem;
+                    border-radius: vars.$border-radius-M;  
+                    box-shadow: vars.$box-shadow-dark;
+ 
+                    &__title {
+                        font-size: 1.2rem;
+                        margin: 0;
+                        margin-bottom: 0.5rem;
+                        font-weight: func.weight(bolder);
+                        color: vars.$black;
+                    }
+ 
+                    &__regular {
+                        margin: 0;
+                        margin-bottom: 0.5rem;
+                        color: vars.$primary-color;
+                        line-height: 1.5;
+                    }
+                }
+                 
+                span {
+                    color: #595959;
+                    font-size: 0.8rem;
+                    display: block;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    } 
+}
+
+.colorLoop {
+    width: 100%;
+    @extend %flex-center;
+
+    &__block {
+        height: 3rem;
+        flex-basis: 20%;
+    }
+
+    @each $key, $shade in vars.$shadesloop {
+        .#{$key} { background-color: $shade; }
+    }
+}
